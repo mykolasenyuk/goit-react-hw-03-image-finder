@@ -11,7 +11,7 @@ export default class ImageGallery extends Component {
   componentDidUpdate(prevProps, prevState) {
     const prevName = prevProps.imageName;
     const newName = this.props.imageName;
-    const page = this.props.page;
+    const page = this.props.page + 1;
     console.log(page);
     if (prevName !== newName) {
       //   console.log('changed name');
@@ -29,7 +29,7 @@ export default class ImageGallery extends Component {
   }
 
   render() {
-    const { images, error, status, openModal } = this.state;
+    const { images, error, status } = this.state;
 
     if (status === 'idle') {
       return <div> Enter Image name</div>;
@@ -49,7 +49,7 @@ export default class ImageGallery extends Component {
               tags={tags}
               webformatURL={webformatURL}
               largeImageURL={largeImageURL}
-              openModal={() => openModal(id)}
+              openModal={this.props.openModal}
             />
           ))}
         </ul>
