@@ -29,7 +29,7 @@ export default class ImageGallery extends Component {
   }
 
   render() {
-    const { images, error, status } = this.state;
+    const { images, error, status, openModal } = this.state;
 
     if (status === 'idle') {
       return <div> Enter Image name</div>;
@@ -49,6 +49,7 @@ export default class ImageGallery extends Component {
               tags={tags}
               webformatURL={webformatURL}
               largeImageURL={largeImageURL}
+              openModal={() => openModal(id)}
             />
           ))}
         </ul>

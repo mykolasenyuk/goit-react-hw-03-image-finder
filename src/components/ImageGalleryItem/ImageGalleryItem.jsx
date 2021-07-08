@@ -5,9 +5,10 @@ export default function ImageGalleryItem({
   webformatURL,
   tags,
   largeImageURL,
+  openModal,
 }) {
   return (
-    <li key={id}>
+    <li key={id} onClick={openModal}>
       <img
         src={webformatURL}
         alt={tags}
