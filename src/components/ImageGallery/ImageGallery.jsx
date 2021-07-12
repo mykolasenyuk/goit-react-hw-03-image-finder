@@ -1,6 +1,7 @@
 // import React, { Component } from 'react';
 import ImageGalleryItem from '../ImageGalleryItem/ImageGalleryItem';
 import s from './ImageGallery.module.css';
+import PropTypes from 'prop-types';
 
 const ImageGallery = ({ images, openModal }) => {
   return (
@@ -18,6 +19,18 @@ const ImageGallery = ({ images, openModal }) => {
 };
 
 export default ImageGallery;
+
+ImageGallery.propTypes = {
+  images: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      webformatURL: PropTypes.string.isRequired,
+      largeImageURL: PropTypes.string.isRequired,
+      tags: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  openModal: PropTypes.func.isRequired,
+};
 
 // import LoaderSpiner from '../Loader/Loader';
 // import api from '../../services/imageApi';

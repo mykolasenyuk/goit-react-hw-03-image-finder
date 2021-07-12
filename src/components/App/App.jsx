@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import api from '../services/imageApi';
-import LoaderSpiner from './Loader/Loader';
-import SearchBar from './SearchBar/SearchBar';
-import ImageGallery from './ImageGallery/ImageGallery';
-import Button from './Button/Button';
-import Modal from './Modal/Modal';
-import s from '../components/App.module.css';
+import api from '../../services/imageApi';
+import LoaderSpiner from '../Loader/Loader';
+import SearchBar from '../SearchBar/SearchBar';
+import ImageGallery from '../ImageGallery/ImageGallery';
+import Button from '../Button/Button';
+import Modal from '../Modal/Modal';
+import s from './App.module.css';
 export default class App extends Component {
   state = {
     imageName: '',
