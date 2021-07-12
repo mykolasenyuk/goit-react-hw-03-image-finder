@@ -105,7 +105,7 @@ export default class App extends Component {
           <ImageGallery openModal={this.openModal} images={images} />
           <Button onClick={this.onLoadMore} />
           {modalIsOpen && (
-            <Modal image={selectedImage} onClose={this.closeModal}></Modal>
+            <Modal image={selectedImage} onClose={this.closeModal} />
           )}
           <ToastContainer />
         </div>
