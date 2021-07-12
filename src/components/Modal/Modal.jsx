@@ -30,7 +30,7 @@ export default class Modal extends Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { image } = this.props;
     return createPortal(
       <div
         className={s.Overlay}
@@ -38,7 +38,9 @@ export default class Modal extends Component {
         onClick={this.props.onClose}
         role="presentation"
       >
-        <div className={s.Modal}>{children}</div>
+        <div className={s.Modal}>
+          <img src={image.src} alt={image.alt} />
+        </div>
       </div>,
       ModalRoot,
     );

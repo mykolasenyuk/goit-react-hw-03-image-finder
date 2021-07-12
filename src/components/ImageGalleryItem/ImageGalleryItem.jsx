@@ -1,4 +1,5 @@
 import React from 'react';
+import s from './ImageGelleryItem.module.css';
 
 export default function ImageGalleryItem({
   id,
@@ -8,12 +9,12 @@ export default function ImageGalleryItem({
   openModal,
 }) {
   return (
-    <li key={id} onClick={openModal}>
+    <li key={id} onClick={openModal} className={s.ImageGalleryItem}>
       <img
         src={webformatURL}
         alt={tags}
         data-source={largeImageURL}
-        className="ImageGalleryItem-image"
+        className={s.ImageGalleryItemImage}
       />
     </li>
   );
