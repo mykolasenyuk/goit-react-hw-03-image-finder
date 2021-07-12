@@ -103,7 +103,7 @@ export default class App extends Component {
         <div className={s.App}>
           <SearchBar onSubmit={this.handleFormSubmit} />
           <ImageGallery openModal={this.openModal} images={images} />
-          <Button onClick={this.onLoadMore} />
+          {images.length > 0 && <Button onClick={this.onLoadMore} />}
           {modalIsOpen && (
             <Modal image={selectedImage} onClose={this.closeModal} />
           )}
